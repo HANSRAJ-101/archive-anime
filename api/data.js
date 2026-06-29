@@ -50,46 +50,46 @@ module.exports = [
   },
   {
     id: 3,
-    title: "Sample Series Three",
-    cover: "https://placehold.co/400x560/1a1a1d/e63946?text=Series+Three",
-    synopsis: "Placeholder synopsis. Replace with your own series description.",
-    tags: ["Comedy", "Slice of Life"],
+    title: "Farming Life in Another World",
+    cover: "https://cdn.myanimelist.net/images/anime/1983/132329l.jpg",
+    synopsis: " During the final years of his life, Hiraku Machio remained confined to a hospital bed with a terminal illness until he finally passed away.Taking pity on the unfair life he lived, a god decides to reincarnate Hiraku in another world where he can live as he pleases. Wanting to try farming in this new life, he is bestowed with an all-in-one “Almighty Farming Tool” that can transform into any useful implement he wishes.Hiraku is then transported to a forest seemingly far from civilization. Here, he plans to build and farm everything from scratch—gradually developing the lifeless area into a thriving new society. .",
+    tags: ["Fantasy", "Slice of Life", "Isekai"],
     episodes: [
       {
         number: 1,
         title: "Episode 1",
         type: "iframe",
-        src: "https://rumble.com/embed/REPLACE_WITH_VIDEO_ID/"
+        src: "https://gdmirrorbot.nl/embed/en2l9r6"
       },
       {
         number: 2,
         title: "Episode 2",
         type: "iframe",
-        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+        src: "https://gdmirrorbot.nl/embed/taup63d"
       },
       {
         number: 3,
         title: "Episode 3",
         type: "iframe",
-        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+        src: "https://gdmirrorbot.nl/embed/jonuq1e"
       },
       {
         number: 4,
         title: "Episode 4",
         type: "iframe",
-        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+        src: "https://gdmirrorbot.nl/embed/vru4xh8"
       },
       {
         number: 5,
         title: "Episode 5",
         type: "iframe",
-        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+        src: "https://gdmirrorbot.nl/embed/vi3jlvm"
       },
       {
         number: 6,
         title: "Episode 6",
         type: "iframe",
-        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+        src: "https://gdmirrorbot.nl/embed/zag1uao"
       }
     ]
   },
