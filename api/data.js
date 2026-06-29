@@ -66,7 +66,7 @@ module.exports = [
   {
     id: 4,
     title: "Dr. STONE",
-    cover: "https://placehold.co/400x560/1a1a1d/e63946?text=Dr.+STONE",
+    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF-K4_0tIgDWOWLHxekBuVIFNK0iCDV8HgLraqe7huHA&s",
     synopsis: "Add your own synopsis here.",
     tags: ["Season 1"],
     episodes: [
