@@ -60,6 +60,36 @@ module.exports = [
         title: "Episode 1",
         type: "iframe",
         src: "https://rumble.com/embed/REPLACE_WITH_VIDEO_ID/"
+      },
+      {
+        number: 2,
+        title: "Episode 2",
+        type: "iframe",
+        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+      },
+      {
+        number: 3,
+        title: "Episode 3",
+        type: "iframe",
+        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+      },
+      {
+        number: 4,
+        title: "Episode 4",
+        type: "iframe",
+        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+      },
+      {
+        number: 5,
+        title: "Episode 5",
+        type: "iframe",
+        src: "https://desidubanime.p2pplay.pro/#kl5eju"
+      },
+      {
+        number: 6,
+        title: "Episode 6",
+        type: "iframe",
+        src: "https://desidubanime.p2pplay.pro/#kl5eju"
       }
     ]
   },
