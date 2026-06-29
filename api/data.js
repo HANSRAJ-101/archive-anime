@@ -62,5 +62,23 @@ module.exports = [
         src: "https://rumble.com/embed/REPLACE_WITH_VIDEO_ID/"
       }
     ]
+  },
+  {
+    id: 4,
+    title: "Dr. STONE",
+    cover: "https://placehold.co/400x560/1a1a1d/e63946?text=Dr.+STONE",
+    synopsis: "Add your own synopsis here.",
+    tags: ["Season 1"],
+    episodes: [
+      {
+        number: 1,
+        title: "E01 - 1080P",
+        type: "iframe",
+        // Derived from the watch-page slug https://rumble.com/v7bzixm-...html
+        // If this doesn't play, go to the video on rumble.com -> Share -> Embed
+        // and paste the exact URL from that embed code here instead.
+        src: "https://rumble.com/embed/v7bzixm/"
+      }
+    ]
   }
 ];

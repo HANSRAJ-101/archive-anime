@@ -37,19 +37,12 @@ module.exports = (req, res) => {
 
   // Default: return the list without the heavy episode payload
   const summary = animeList.map(({ id, title, cover, synopsis, tags, episodes }) => ({
-    id: 1,
-    title: "Dr. STONE Season 1 E01- 1080P",
-    cover: "https://cdn.discordapp.com/attachments/1447917590663008329/1521084809349435504/images.jpg?ex=6a438c1e&is=6a423a9e&hm=b9c55ab992faf246ef93b85a4f4c84d36e142db82022ac142b336a97b7870fdc&",
-    synopsis: "One or two sentences about the show.",
-    tags: ["Action", "Fantasy"],
-    episodes:
-    {
-      number: 1,
-      title: "Episode 1",
-      type: "iframe",                                 // or "mp4"
-      src: "https://rumble.com/v7bzixm-dr.-stone-season-1-e01-1080p.html"        // the embed/video URL
-    }
-
+    id,
+    title,
+    cover,
+    synopsis,
+    tags,
+    episodeCount: episodes.length
   }));
 
   res.status(200).json(summary);
