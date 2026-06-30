@@ -35,16 +35,16 @@ module.exports = [
   },
   {
     id: 2,
-    title: "Sample Series Two",
-    cover: "https://placehold.co/400x560/1a1a1d/e63946?text=Series+Two",
-    synopsis: "Placeholder synopsis. Replace with your own series description.",
-    tags: ["Drama", "Fantasy"],
+    title: "India’s Got Latent (Season 2) ",
+    cover: "https://image.tmdb.org/t/p/w500/eml0QA3zUMizBvrlfQKhWI0swVh.jpg",
+    synopsis: "Comedy  Reality. Replace with your own series description.",
+    tags: [" 4K | 1080p | 720p | 480p  ", "Hindi"],
     episodes: [
       {
         number: 1,
         title: "Episode 1",
         type: "mp4",
-        src: "https://www.w3schools.com/html/mov_bbb.mp4"
+        src: "https://hubstream.art/#glb5wf"
       }
     ]
   },
