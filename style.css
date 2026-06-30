@@ -43,20 +43,22 @@ body {
   flex-wrap: wrap;
 }
 
-.brand { display: flex; align-items: center; gap: 12px; }
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 14px; /* Slightly widened space between image logo and text */
+}
 
-.brand-stamp {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 2px solid var(--red);
-  color: var(--red);
-  font-family: var(--font-display);
-  font-size: 20px;
-  transform: rotate(-8deg);
-  flex-shrink: 0;
+/* Replaced .brand-stamp with your custom website logo properties */
+.brand-logo {
+  height: 38px;          /* Matches your site layout layout proportions perfectly */
+  width: auto;           /* Maintains original aspect ratio */
+  object-fit: contain;
+  flex-shrink: 0;        /* Prevents the image from squeezing down on smaller screens */
+  
+  /* Optional: Keeps the dynamic anime aesthetic tilt from your original design. 
+     Remove or change to 0deg if you want your logo completely straight. */
+  transform: rotate(-4deg); 
 }
 
 .brand-name {
@@ -64,6 +66,7 @@ body {
   font-size: 28px;
   letter-spacing: 0.03em;
   font-weight: 400;
+  line-height: 1;        /* Clean vertical centering baseline alignment */
 }
 .brand-name span { color: var(--red); }
 
