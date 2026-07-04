@@ -211,40 +211,144 @@ main { padding: 0 5vw 60px; }
 
 .drawer {
   position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: min(480px, 100%);
-  background: var(--panel);
-  border-left: 1px solid var(--border);
+  inset: 0;
+  background: var(--bg);
   z-index: 50;
   overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform 0.28s ease;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
-.drawer.visible { transform: translateX(0); }
+.drawer.visible { opacity: 1; transform: scale(1); }
 
 .close-btn {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 5;
-  width: 34px;
-  height: 34px;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 60;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  border: none;
-  background: rgba(14,14,16,0.7);
+  border: 1px solid var(--border);
+  background: rgba(14,14,16,0.85);
   color: var(--paper);
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
 }
-.close-btn:hover { background: var(--red); }
+.close-btn:hover { background: var(--red); border-color: var(--red); }
+
+/* ---------------- 3-column watch layout ---------------- */
+.watch-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 320px;
+  align-items: start;
+  gap: 0;
+  min-height: 100vh;
+}
+
+@media (max-width: 1100px) {
+  .watch-layout { grid-template-columns: 1fr; }
+}
+
+.watch-episodes-col {
+  border-right: 1px solid var(--border);
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px 16px 40px;
+}
+@media (max-width: 1100px) { .watch-episodes-col { height: auto; order: 3; border-right: none; border-top: 1px solid var(--border); } }
+
+.watch-episodes-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.watch-episodes-head h3 {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+.episode-filter {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--paper);
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 100%;
+}
+.episode-filter:focus { outline: none; border-color: var(--red-dim); }
+
+.watch-center-col {
+  padding: 20px 22px 40px;
+  border-right: 1px solid var(--border);
+}
+@media (max-width: 1100px) { .watch-center-col { border-right: none; order: 1; } }
+
+.watch-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 2px 0;
+  flex-wrap: wrap;
+}
+.watch-tool-btn {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--paper);
+  font-size: 11px;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.watch-tool-btn:hover { border-color: var(--red); color: var(--red); }
+.watch-tool-note { font-size: 11px; color: var(--muted); }
+.watch-toolbar-spacer { flex: 1; }
+
+.watch-info-col {
+  padding: 20px 20px 40px;
+}
+@media (max-width: 1100px) { .watch-info-col { order: 2; } }
+
+.watch-info-cover {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.watch-share-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.watch-share-label { font-size: 11px; color: var(--muted); }
+.watch-share-btn {
+  background: linear-gradient(135deg, var(--red), var(--red-dim));
+  border: none;
+  color: var(--paper);
+  font-size: 11px;
+  padding: 9px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.watch-share-btn:hover { filter: brightness(1.1); }
 
 .player-shell {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .player-mount { width: 100%; height: 100%; }
 .player-mount iframe,
@@ -268,7 +372,7 @@ main { padding: 0 5vw 60px; }
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 22px 0;
+  padding: 10px 0 0;
 }
 
 .live-progress-track {
@@ -300,9 +404,13 @@ main { padding: 0 5vw 60px; }
 .next-episode-control {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 10px;
-  padding: 10px 22px 0;
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: rgba(58,141,204,0.12);
+  border: 1px solid rgba(58,141,204,0.4);
+  border-radius: 6px;
 }
 
 .next-episode-hint {
@@ -326,18 +434,20 @@ main { padding: 0 5vw 60px; }
   color: var(--red);
 }
 
-.drawer-info { padding: 20px 22px 6px; }
+.drawer-info { padding: 0; }
 
 .drawer-title {
   font-family: var(--font-display);
   font-size: 24px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
 }
 
 .drawer-synopsis {
   color: var(--muted);
-  font-size: 13.5px;
-  margin-bottom: 12px;
+  font-size: 13px;
+  margin: 10px 0 0;
+  line-height: 1.6;
 }
 
 .drawer-tags {

@@ -25,6 +25,10 @@ const drawerSynopsis = document.getElementById("drawerSynopsis");
 const drawerTags = document.getElementById("drawerTags");
 const episodeList = document.getElementById("episodeList");
 const playlistBtn = document.getElementById("playlistBtn");
+const watchInfoCover = document.getElementById("watchInfoCover");
+const episodeFilter = document.getElementById("episodeFilter");
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+const shareBtn = document.getElementById("shareBtn");
 
 let debounceTimer = null;
 let mylistActive = false;
@@ -341,6 +345,9 @@ function renderDrawer(anime) {
   drawerTitle.textContent = anime.title;
   drawerSynopsis.textContent = anime.synopsis;
   drawerTags.innerHTML = (anime.tags || []).map(t => `<span>${escapeHtml(t)}</span>`).join("");
+  watchInfoCover.src = anime.cover;
+  watchInfoCover.alt = `${anime.title} cover art`;
+  if (episodeFilter) episodeFilter.value = "";
 
   playerMount.innerHTML = `<p class="player-placeholder mono">SELECT AN EPISODE →</p>`;
   removeDynamicPlayerControls();
@@ -754,6 +761,50 @@ overlay.addEventListener("click", hideDrawer);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") hideDrawer();
 });
+
+// ---------- episode filter (by number or title text) ----------
+if (episodeFilter) {
+  episodeFilter.addEventListener("input", () => {
+    const q = episodeFilter.value.trim().toLowerCase();
+    episodeList.querySelectorAll(".episode-item").forEach((btn) => {
+      const li = btn.closest("li");
+      const text = btn.textContent.toLowerCase();
+      li.style.display = !q || text.includes(q) ? "" : "none";
+    });
+  });
+}
+
+// ---------- fullscreen ----------
+if (fullscreenBtn) {
+  fullscreenBtn.addEventListener("click", () => {
+    const shell = document.querySelector(".player-shell");
+    if (!shell) return;
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      shell.requestFullscreen?.();
+    }
+  });
+}
+
+// ---------- share ----------
+if (shareBtn) {
+  shareBtn.addEventListener("click", async () => {
+    if (!currentAnime) return;
+    const url = `${window.location.origin}${window.location.pathname}?open=${currentAnime.id}`;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: currentAnime.title, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        shareBtn.textContent = "✓ Copied";
+        setTimeout(() => (shareBtn.textContent = "🔗 Share"), 1500);
+      }
+    } catch {
+      // user cancelled the native share sheet — nothing to do
+    }
+  });
+}
 
 // ---------- search ----------
 searchInput.addEventListener("input", (e) => {
