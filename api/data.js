@@ -46,7 +46,7 @@ module.exports = [
   },
   {
     id: 2,
-    title: "India’s Got Latent (Season 2) ",
+    title: "Indias Got Latent Season 2  ",
     cover: "https://image.tmdb.org/t/p/w500/eml0QA3zUMizBvrlfQKhWI0swVh.jpg",
     synopsis: "Comedy  Reality. Replace with your own series description.",
     tags: [" 4K | 1080p | 720p | 480p  ", "Hindi"],
@@ -106,8 +106,8 @@ module.exports = [
   },
   {
     id: 4,
-    title: "Dr. STONE",
-    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF-K4_0tIgDWOWLHxekBuVIFNK0iCDV8HgLraqe7huHA&s",
+    title: "Dr STONE",
+    cover: "https://i.postimg.cc/T10gjyVx/upscalemedia-transformed-(10).png",
     synopsis: "Add your own synopsis here.",
     tags: ["Season 1"],
     episodes: [
