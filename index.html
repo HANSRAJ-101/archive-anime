@@ -110,14 +110,23 @@
   </aside>
 
   <footer class="site-footer">
-    <p class="mono">ANIME ARCHIVE — static front end + serverless API, deployed on Vercel.</p>
-    <div class="footer-links mono">
-      <a href="https://discord.gg/NVFeE5ygF2" target="_blank" rel="noopener noreferrer">💬 Support Discord</a>
-      <a href="mailto:hnsrjsih4@gmail.com">✉ hnsrjsih4@gmail.com</a>
-    </div>
-  </footer>
+  <div class="footer-links mono">
+    <a href="https://discord.gg/NVFeE5ygF2" target="_blank" rel="noopener noreferrer">💬 Support Discord</a>
+    <a href="mailto:hnsrjsih4@gmail.com">✉ hnsrjsih4@gmail.com</a>
+  </div>
 
-  <script src="auth.js"></script>
-  <script src="script.js"></script>
+  <p class="mono" style="margin-top: 15px;">
+    Copyright &copy; <span id="year"></span> | Developed by 
+    <strong>HANSRAJ SINH VAGHELA</strong> and <strong>Professor</strong>
+  </p>
+</footer>
+
+<script>
+  // Automatically update the year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="auth.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
