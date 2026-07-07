@@ -71,20 +71,27 @@ body {
   background: var(--bg);
 }
 
-.brand { display: flex; align-items: center; gap: 12px; }
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+}
 
 .brand-stamp {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 11px;
-  background: var(--grad-brand);
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 20px;
+  display: block;             /* Grid se badal kar block karein taaki image default behave kare */
+  width: 48px;                /* Size ko 38px se badha kar 48px kiya taaki details visible hon */
+  height: 48px;               /* Height ko bhi width ke barabar rakhein */
+  border-radius: 50px;        /* Logo round hai, toh border-radius 50% ya badi value dein */
   flex-shrink: 0;
   box-shadow: 0 4px 18px var(--pink-glow);
+}
+
+/* Yeh naya rule add karein taaki image perfectly fit ho jaye */
+.brand-stamp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* Logo stretch nahi hoga aur container mein set rahega */
+  border-radius: inherit;
 }
 
 .brand-name {
