@@ -568,7 +568,7 @@
       </div>
 
       <button class="donate-pay-btn" id="payNowBtn">📲 PAY NOW — OPEN UPI APP</button>
-      <p class="donate-pay-btn-note">Opens Google Pay / PhonePe / Paytm directly on mobile. On desktop, scan the QR instead.</p>
+      <p class="donate-pay-btn-note">Automatically opens Google Pay / PhonePe / Paytm on your phone. On a computer, scan the QR instead.</p>
 
       <div class="donate-app-row">
         <span class="donate-app-chip">Google Pay</span>
@@ -637,24 +637,24 @@
     const DONATE_CONFIG = {
       upiId: "hindianimeworld@upi",     // <-- your real UPI ID (shown as text under the QR)
       payeeName: "Hindi Anime World",       // <-- name shown to the payer
-      totalRaised: 48250,                   // <-- update by hand, shown in the counter (₹)
-      totalDonors: 112,                     // <-- update by hand
+      totalRaised: 811,                   // <-- update by hand, shown in the counter (₹)
+      totalDonors: 10,                     // <-- update by hand
       qrImageUrl: "https://i.postimg.cc/ZR9VW4Ly/hindianimeworld-upi.jpg" // <-- your real UPI QR image (leave blank "" to auto-generate one from upiId instead)
     };
 
     // Top donors — edit this list by hand whenever someone donates.
     // Sorted automatically by amount, highest first. Max 10 shown.
     const DONORS = [
-      { name: "Rohan Mehta", amount: 2500 },
-      { name: "Ayesha Khan", amount: 2000 },
-      { name: "Sam", amount: 1800 },
-      { name: "Priya Sharma", amount: 1500 },
-      { name: "Dev Patel", amount: 1200 },
-      { name: "Anonymous", amount: 1000 },
-      { name: "Kavya", amount: 800 },
-      { name: "Arjun Rao", amount: 750 },
-      { name: "Neha", amount: 600 },
-      { name: "Vikram Singh", amount: 500 }
+      { name: "Rohan Mehta", amount: 200 },
+      { name: "Ayesha Khan", amount: 186 },
+      { name: "Sam", amount: 150 },
+      { name: "Priya Sharma", amount: 100 },
+      { name: "Dev Patel", amount: 70 },
+      { name: "Anonymous", amount: 50 },
+      { name: "Kavya", amount: 30 },
+      { name: "Arjun Rao", amount: 10 },
+      { name: "Neha", amount: 10 },
+      { name: "Vikram Singh", amount: 5 }
     ];
 
     // ============================================================
@@ -668,13 +668,20 @@
     document.getElementById("upiIdText").textContent = DONATE_CONFIG.upiId;
 
     document.getElementById("payNowBtn").addEventListener("click", () => {
-      // upi:// deep links only work on devices with a UPI app installed (Android/iOS).
-      // On desktop this will typically just do nothing visible, so nudge those users to the QR instead.
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      if (!isMobile) {
-        showToast("No UPI app detected — scan the QR code instead 👆");
-        return;
-      }
+      // Always attempt the upi:// deep link. On a phone with a UPI app installed,
+      // the OS intercepts this and opens the app directly. On desktop (or a phone
+      // with no UPI app), nothing catches it — so if the page is still visible
+      // after a moment, we show a fallback pointing to the QR code instead.
+      const fallback = setTimeout(() => {
+        if (document.visibilityState === "visible") {
+          showToast("No UPI app opened — scan the QR code instead 👆");
+        }
+      }, 1500);
+      window.addEventListener(
+        "visibilitychange",
+        () => clearTimeout(fallback),
+        { once: true }
+      );
       window.location.href = upiUri;
     });
 
