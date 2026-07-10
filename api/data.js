@@ -59,7 +59,7 @@ module.exports = [
   },
   {
     id: 3,
-    title: "Farming Life in Another World",
+    title: "Farming  Life in Another World X",
     cover: "https://cdn.myanimelist.net/images/anime/1983/132329l.jpg",
     banner: "https://i.pinimg.com/1200x/55/2c/77/552c7795a79cb12d7d9f5876ac0e3884.jpg",
     synopsis: " During the final years of his life, Hiraku Machio remained confined to a hospital bed with a terminal illness until he finally passed away.Taking pity on the unfair life he lived, a god decides to reincarnate Hiraku in another world where he can live as he pleases. Wanting to try farming in this new life, he is bestowed with an all-in-one “Almighty Farming Tool” that can transform into any useful implement he wishes.Hiraku is then transported to a forest seemingly far from civilization. Here, he plans to build and farm everything from scratch—gradually developing the lifeless area into a thriving new society. .",
