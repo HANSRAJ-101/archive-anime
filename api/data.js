@@ -768,7 +768,7 @@ module.exports = [
     title: "365 Days to the Wedding",
     cover: "https://image.tmdb.org/t/p/w500/lMVkOrMaWEkHZLdPksKGcdi6hJg.jpg",
     banner: "https://i.ytimg.com/vi/LzNpU_ckjTs/maxresdefault.jpg",
-    synopsis: "Takuya and Rika work at the same travel agency in Tokyo and are both happily introverted and single. But their company is opening a new branch in Alaska next year, and employees without a spouse will be recruited to work there. Desperate to avoid the move, and though they’ve hardly spoken before, they decide to fake an engagement. Can these quiet coworkers become a convincing couple?",
+    synopsis: "Takuya and Rika work at the same travel agency in  Tokyo and are both happily introverted and single. But their company is opening a new branch in Alaska next year, and employees without a spouse will be recruited to work there. Desperate to avoid the move, and though they’ve hardly spoken before, they decide to fake an engagement. Can these quiet coworkers become a convincing couple?",
     tags: ["Animation", "Comedy", "Season 1"],
     episodes: [
       {
