@@ -13,7 +13,7 @@
 //                      LATEST 5 uploaded anime items (based on their position 
 //                      at the very end of this array). If you omit the `banner` 
 //                      property, the system will fall back to using your `cover` art.
-// cover             -> REQUIRED. A direct link to vertical poster art (approx 5:7 
+// cover             -> REQUIRED. A direct link to vertical poster art (approx 5:7 vx 
 //                      aspect ratio) used for the search lists and catalog grids.
 //
 // -------------------- EPISODE MANAGEMENT --------------------
