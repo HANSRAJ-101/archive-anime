@@ -44,6 +44,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* <-- THIS IS THE NEW LINE THAT FIXES SIDE SCROLLING */
 }
 
 .mono { font-family: var(--font-mono); letter-spacing: 0.04em; }
