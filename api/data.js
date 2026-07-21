@@ -1040,6 +1040,183 @@ module.exports = [
         type: "iframe",
         src: "https://bysedikamoum.com/e/9po8w4s68xyl/the-angel-next-door-spoils-me-rotten-s02e12-hindi"
       }
+      
+    ]
+  },
+  {
+    id: 31,
+    title: "The Ramparts of Ice",
+    cover: "https://image.tmdb.org/t/p/w500/rke9UC2QrogvxiQD9TGpbvqDosi.jpg",
+    banner: "https://image.tmdb.org/t/p/w500/rke9UC2QrogvxiQD9TGpbvqDosi.jpg",
+    synopsis: "Weighed down by memories she can’t shake, high schooler Koyuki Hikawa keeps everyone at arm’s length — until three schoolmates draw her out of her shell.",
+    tags: ["Animation", "Comedy", "Drama", "Season 1"],
+    episodes: [
+      {
+        number: 1,
+        title: "Episode 01 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/cvw3z9kbyvbd"
+      },
+      {
+        number: 2,
+        title: "Episode 02 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/l65ezbzzr5oi"
+      },
+      {
+        number: 3,
+        title: "Episode 03 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/yrskkftrbvgl"
+      },
+      {
+        number: 4,
+        title: "Episode 04 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/dr7zqoff0kmx"
+      },
+      {
+        number: 5,
+        title: "Episode 05 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/l2cg6ku53mzw"
+      },
+      {
+        number: 6,
+        title: "Episode 06 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/3o93dghd4k8z"
+      },
+      {
+        number: 7,
+        title: "Episode 07 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/mre65mpe5au0"
+      },
+      {
+        number: 8,
+        title: "Episode 08 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/auy804lcm88y"
+      },
+      {
+        number: 9,
+        title: "Episode 09 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/08fhwhshm42l"
+      },
+      {
+        number: 10,
+        title: "Episode 10 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/2d2e0ga3ifvi"
+      },
+      {
+        number: 11,
+        title: "Episode 11 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/k0q3q350veip"
+      },
+      {
+        number: 12,
+        title: "Episode 12 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/qmzn1bh659b4"
+      },
+      {
+        number: 13,
+        title: "Episode 13 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/3u6p2c2vuxh3"
+      },
+      {
+        number: 14,
+        title: "Episode 14 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/6k930jka2wbz"
+      }
+    ]
+  },
+  {
+    id: 32,
+    title: "With You Our Love Will Make It Through",
+    cover: "https://image.tmdb.org/t/p/w500/uQb3NkDWEXQ9m1w49PzEy04uFn1.jpg",
+    banner: "https://image.tmdb.org/t/p/w500/uQb3NkDWEXQ9m1w49PzEy04uFn1.jpg",
+    synopsis: "When high schooler Mari runs late for school, she never expects to fall for Tsunagu—a gentle, sensitive, beastfolk! In a world where beastfolk are segregated behind walls, Mari and Tsunagu show their differences are truly bridges. Can their love overcome the divide between beastfolk and humanity?",
+    tags: ["Animation", "Sci-Fi & Fantasy", "Drama", "Season 1"],
+    episodes: [
+      {
+        number: 1,
+        title: "Episode 01 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/tpjw6o5pkw13"
+      },
+      {
+        number: 2,
+        title: "Episode 02 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/cb1lun3gc948"
+      },
+      {
+        number: 3,
+        title: "Episode 03 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/t4ixc5fk4v4d"
+      },
+      {
+        number: 4,
+        title: "Episode 04 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/0yigez5wad7a"
+      },
+      {
+        number: 5,
+        title: "Episode 05 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/jynuch9515bp"
+      },
+      {
+        number: 6,
+        title: "Episode 06 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/6tpfswrv22aw"
+      },
+      {
+        number: 7,
+        title: "Episode 07 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/78d0exhnct1x"
+      },
+      {
+        number: 8,
+        title: "Episode 08 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/qed2t7t5zdwl"
+      },
+      {
+        number: 9,
+        title: "Episode 09 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/8fpbykp8d3js"
+      },
+      {
+        number: 10,
+        title: "Episode 10 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/3uzepi5v0jyc"
+      },
+      {
+        number: 11,
+        title: "Episode 11 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/r3037sub2kof"
+      },
+      {
+        number: 12,
+        title: "Episode 12 (1080p)",
+        type: "iframe",
+        src: "https://bysedikamoum.com/e/geuixckic83r"
+      }
     ]
   }
 ];
